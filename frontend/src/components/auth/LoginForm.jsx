@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -94,7 +94,7 @@ const LoginForm = () => {
         </form>
 
         <p className="auth-footer">
-          Don't have an account? <a href="/register">Sign up here</a>
+          Don't have an account? <Link to="/register">Sign up here</Link>
         </p>
       </div>
     </div>
