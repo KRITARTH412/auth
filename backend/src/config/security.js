@@ -32,8 +32,6 @@ const helmetConfig = () => helmet({
  */
 const corsConfig = () => {
   const allowedOrigins = process.env.CORS_ORIGIN 
-    ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim())
-    : ['http://localhost:3000'];
 
   return cors({
     origin: function (origin, callback) {
@@ -51,6 +49,8 @@ const corsConfig = () => {
     allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
     exposedHeaders: ['Set-Cookie'],
     maxAge: 86400, // 24 hours
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
   });
 };
 
