@@ -26,7 +26,7 @@ module.exports = {
   COOKIE_OPTIONS: {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'strict',
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
     path: '/',
   },
 
