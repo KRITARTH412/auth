@@ -4,7 +4,6 @@ services:
     name: auth-backend
     runtime: node
     region: oregon
-    plan: free
     branch: main
     rootDir: backend
     buildCommand: npm install
@@ -36,7 +35,6 @@ services:
   - type: web
     name: auth-frontend
     runtime: static
-    plan: free
     branch: main
     rootDir: frontend
     buildCommand: npm install && npm run build
