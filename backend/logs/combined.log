@@ -1,0 +1,29 @@
+{"level":"info","message":"MongoDB connected successfully","service":"auth-service","timestamp":"2026-05-03 13:45:49"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"auth-service","timestamp":"2026-05-03 13:45:49"}
+{"level":"info","message":"API available at http://localhost:5000/api","service":"auth-service","timestamp":"2026-05-03 13:45:49"}
+{"level":"info","message":"MongoDB connected successfully","service":"auth-service","timestamp":"2026-05-03 13:46:10"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"auth-service","timestamp":"2026-05-03 13:46:10"}
+{"level":"info","message":"API available at http://localhost:5000/api","service":"auth-service","timestamp":"2026-05-03 13:46:10"}
+{"level":"info","message":"MongoDB connected successfully","service":"auth-service","timestamp":"2026-05-03 13:46:36"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"auth-service","timestamp":"2026-05-03 13:46:36"}
+{"level":"info","message":"API available at http://localhost:5000/api","service":"auth-service","timestamp":"2026-05-03 13:46:36"}
+{"level":"info","message":"MongoDB connected successfully","service":"auth-service","timestamp":"2026-05-03 13:46:56"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"auth-service","timestamp":"2026-05-03 13:46:56"}
+{"level":"info","message":"API available at http://localhost:5000/api","service":"auth-service","timestamp":"2026-05-03 13:46:56"}
+{"level":"info","message":"MongoDB connected successfully","service":"auth-service","timestamp":"2026-05-03 13:47:22"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"auth-service","timestamp":"2026-05-03 13:47:22"}
+{"level":"info","message":"API available at http://localhost:5000/api","service":"auth-service","timestamp":"2026-05-03 13:47:22"}
+{"level":"info","message":"MongoDB connected successfully","service":"auth-service","timestamp":"2026-05-03 13:47:42"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"auth-service","timestamp":"2026-05-03 13:47:42"}
+{"level":"info","message":"API available at http://localhost:5000/api","service":"auth-service","timestamp":"2026-05-03 13:47:42"}
+{"level":"info","message":"MongoDB connected successfully","service":"auth-service","timestamp":"2026-05-03 13:49:56"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"auth-service","timestamp":"2026-05-03 13:49:56"}
+{"level":"info","message":"API available at http://localhost:5000/api","service":"auth-service","timestamp":"2026-05-03 13:49:56"}
+{"level":"info","message":"User registered successfully: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:13"}
+{"level":"info","message":"User logged in successfully: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:34"}
+{"level":"debug","message":"User authenticated: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:34"}
+{"level":"debug","message":"Profile retrieved for user: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:34"}
+{"level":"debug","message":"User authenticated: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:34"}
+{"level":"debug","message":"Profile retrieved for user: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:34"}
+{"level":"debug","message":"User authenticated: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:39"}
+{"level":"info","message":"User logged out successfully: 69f70795aec4be2d625aead4","service":"auth-service","timestamp":"2026-05-03 14:00:39"}
