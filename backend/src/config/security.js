@@ -31,14 +31,35 @@ const helmetConfig = () => helmet({
  * Allows requests from specific origins
  */
 const corsConfig = () => {
-  const allowedOrigins = process.env.CORS_ORIGIN 
+  const allowedOrigins = [
+    process.env.CORS_ORIGIN,
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'http://localhost:4173',
+    'http://localhost:8080',
+  ].filter(Boolean);
+
+  // Parse comma-separated origins if provided
+  const parsedOrigins = allowedOrigins.flatMap(origin => 
+    origin.includes(',') ? origin.split(',').map(o => o.trim()) : [origin]
+  );
 
   return cors({
-    origin: function (origin, callback) {
+    origin: (origin, callback) => {
       // Allow requests with no origin (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-      
-      if (allowedOrigins.indexOf(origin) !== -1) {
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      const isAllowed = parsedOrigins.some(allowedOrigin => {
+        if (allowedOrigin === '*') return true;
+        return origin === allowedOrigin;
+      });
+
+      const isRenderSubdomain = origin.endsWith('.onrender.com');
+      const isDevelopment = process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test';
+
+      if (isAllowed || isRenderSubdomain || isDevelopment) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));
@@ -46,13 +67,12 @@ const corsConfig = () => {
     },
     credentials: true, // Allow cookies
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
     exposedHeaders: ['Set-Cookie'],
     maxAge: 86400, // 24 hours
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
   });
 };
+
 
 module.exports = {
   helmetConfig,
