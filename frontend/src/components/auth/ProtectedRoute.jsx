@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation, Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 
 const ProtectedRoute = ({ children, requiredRole = null }) => {
@@ -37,7 +37,7 @@ const ProtectedRoute = ({ children, requiredRole = null }) => {
       }}>
         <h2>Access Denied</h2>
         <p>You don't have permission to access this page.</p>
-        <a href="/dashboard" style={{ color: '#667eea' }}>Go to Dashboard</a>
+        <Link to="/dashboard" style={{ color: '#667eea' }}>Go to Dashboard</Link>
       </div>
     );
   }
