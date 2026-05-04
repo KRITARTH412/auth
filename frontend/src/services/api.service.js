@@ -46,8 +46,10 @@ axiosInstance.interceptors.response.use(
         return axiosInstance(originalRequest);
       } catch (refreshError) {
         // Refresh failed, redirect to login only if not already on login page
-        if (!window.location.pathname.includes('/login')) {
-          window.location.href = '/login';
+        const isLoginPage = window.location.pathname.includes('/login') || window.location.hash.includes('/login');
+        if (!isLoginPage) {
+          // If we're using HashRouter, we should redirect to #/login
+          window.location.href = window.location.hash ? '#/login' : '/login';
         }
         return Promise.reject(refreshError);
       }
