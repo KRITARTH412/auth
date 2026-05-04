@@ -33,9 +33,9 @@ services:
         value: info
 
   # Frontend Static Site
-  - type: static
+  - type: web
     name: auth-frontend
-    region: oregon
+    runtime: static
     plan: free
     branch: main
     rootDir: frontend
