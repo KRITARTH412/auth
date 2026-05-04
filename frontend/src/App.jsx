@@ -45,9 +45,9 @@ const NotFound = () => (
   }}>
     <h1 style={{ fontSize: '72px', margin: 0, color: '#667eea' }}>404</h1>
     <h2 style={{ margin: 0, color: '#333' }}>Page Not Found</h2>
-    <a href="/" style={{ color: '#667eea', textDecoration: 'none', fontSize: '18px' }}>
+    <Link to="/" style={{ color: '#667eea', textDecoration: 'none', fontSize: '18px' }}>
       Go Home
-    </a>
+    </Link>
   </div>
 );
 
