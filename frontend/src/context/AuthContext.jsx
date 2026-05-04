@@ -17,7 +17,9 @@ export const AuthProvider = ({ children }) => {
     try {
       // Only check auth if we might have a valid session
       // Don't make the request if we're on login/register pages
-      if (window.location.pathname === '/login' || window.location.pathname === '/register') {
+      const path = window.location.pathname;
+      const hash = window.location.hash;
+      if (path === '/login' || path === '/register' || hash === '#/login' || hash === '#/register') {
         setIsLoading(false);
         return;
       }
